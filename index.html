@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 4: Persuasive or Deceptive Visualization?</title>
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #555;
+      --muted2:#6b7280;
+      --border:#e6e6e6;
+      --card:#f6f6f6;
+      --shadow: 0 6px 18px rgba(0,0,0,0.06);
+      --radius: 14px;
+      --max: 900px;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      line-height:1.7;
+      padding:56px 18px;
+    }
+
+    .container{
+      max-width: var(--max);
+      margin:0 auto;
+    }
+
+    header{
+      margin-bottom:28px;
+    }
+
+    h1{
+      font-size: 30px;
+      line-height:1.15;
+      margin:0 0 10px;
+      letter-spacing:-0.2px;
+    }
+
+    .author{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .author a{
+      color: inherit;
+      text-decoration: none;
+      border-bottom:1px dotted var(--border);
+    }
+
+    .divider{
+      height:1px;
+      background:var(--border);
+      margin:18px 0 10px;
+    }
+
+    h2{
+      font-size: 20px;
+      margin: 34px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      letter-spacing:-0.1px;
+    }
+
+    h3{
+      font-size: 18px;
+      margin: 22px 0 10px;
+      color:#222;
+    }
+
+    p{
+      margin: 0 0 14px;
+      text-align: justify;
+    }
+
+    ul{
+      margin: 10px 0 18px 22px;
+      padding:0;
+    }
+
+    li{
+      margin: 8px 0;
+    }
+
+    figure{
+      margin: 18px 0 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    figure img{
+      width:100%;
+      display:block;
+      background:#fff;
+    }
+
+    figcaption{
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      padding: 12px 14px 14px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--muted2);
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    .cap-title{
+      font-weight: 700;
+      color:#374151;
+      margin-bottom:6px;
+      font-size: 13.5px;
+    }
+
+    .cap-meta{
+      margin-top:8px;
+      font-size: 12.5px;
+      color:#8a8f98;
+    }
+
+    .analysis-block{
+      margin: 0 0 30px;
+      padding: 14px 16px;
+      border-left: 3px solid #e5e7eb;
+      background: #fafafa;
+      border-radius: 10px;
+    }
+
+    .analysis-block strong{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .pill{
+      display:inline-block;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-size:12px;
+      color:#374151;
+      background:#f3f4f6;
+      border:1px solid #e5e7eb;
+      padding:3px 10px;
+      border-radius:999px;
+      margin-right:8px;
+      margin-top:8px;
+    }
+
+    .question{
+      margin: 18px 0 22px;
+      padding: 16px 18px;
+      background: #fbfbfb;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .question .label{
+      display:block;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      color:#6b7280;
+      letter-spacing:0.08em;
+      text-transform: uppercase;
+      margin-bottom:6px;
+    }
+
+    .question p{
+      margin:0;
+      text-align:left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Assignment 4: Persuasive or Deceptive Visualization?</h1>
+      <div class="author">
+        <div><strong>Shengtao Shen</strong> · <a href="mailto:sstheo@mit.edu">sstheo@mit.edu</a></div>
+        <div>Interactive Visualization and Society</div>
+        <div class="pill">A4</div><div class="pill">Guttmacher Institute Abortion Data by State</div>
+      </div>
+      <div class="divider"></div>
+    </header>
+
+    <h2>Proposition</h2>
+
+    <div class="question">
+      <span class="label">Proposition</span>
+      <p>
+        Abortion bans and clinic scarcity do not reduce abortion need; they primarily relocate where abortion care occurs.
+      </p>
+    </div>
+
+    <h2>Visualization 1 — For the Proposition</h2>
+
+    <figure>
+      <img src="img/1.png" alt="Visualization 1 supporting the proposition">
+      <figcaption>
+        <div class="cap-title">Figure 1 — FOR: Abortion bans don’t reduce need, only relocate care</div>
+        This visualization compares in-state abortion rates to resident abortion rates across selected states where the mismatch is strongest. The long horizontal spans emphasize states in which abortion care appears much lower when measured by in-state occurrence than when measured by residents’ experiences.
+        <div class="cap-meta">Source: Guttmacher Institute abortion data by state, 2020.</div>
+      </figcaption>
+    </figure>
+
+    <div class="analysis-block">
+      <p><strong>How this chart argues for the proposition:</strong> This chart frames the gap between <em>in-state abortion rate</em> and <em>resident abortion rate</em> as evidence that abortion care has not disappeared, but has instead shifted out of state. By focusing on the most extreme mismatches, the figure encourages the reader to interpret low in-state rates as incomplete or misleading indicators of actual abortion need.</p>
+
+      <ul>
+        <li><strong>Selected states only:</strong> The chart does not show all 50 states equally. Instead, it highlights those where the mismatch between resident and in-state rates is largest, making the relocation argument appear especially strong.</li>
+        <li><strong>Range-style encoding:</strong> The horizontal span makes the difference itself feel like the main story. Rather than presenting two separate values neutrally, the bar visually dramatizes the gap between them.</li>
+        <li><strong>Color hierarchy:</strong> The resident-related endpoint is made more visually prominent than the in-state endpoint, subtly encouraging the reader to treat resident rate as the more meaningful reality.</li>
+        <li><strong>Strong framing title:</strong> The title implies a causal interpretation: abortion bans do not reduce need, but merely change where care is recorded.</li>
+      </ul>
+    </div>
+
+    <h2>Visualization 2 — Against the Proposition</h2>
+
+    <figure>
+      <img src="img/2.png" alt="Visualization 2 arguing against the proposition">
+      <figcaption>
+        <div class="cap-title">Figure 2 — AGAINST: Higher access barriers still correspond with lower resident abortion rates</div>
+        This scatterplot reframes the question by treating resident abortion rate as the primary outcome and a composite access burden score as the explanatory variable. The downward trend and highlighted lower-right quadrant suggest that higher barriers still align with lower abortion rates overall.
+        <div class="cap-meta">Source: Guttmacher Institute abortion data by state, 2020.</div>
+      </figcaption>
+    </figure>
+
+    <div class="analysis-block">
+      <p><strong>How this chart argues against the proposition:</strong> Instead of comparing where abortions occur, this visualization treats resident abortion rate itself as the key outcome and argues that states with greater access burdens still tend to show lower rates. This shifts attention away from geographic relocation and toward a broader claim that restrictions still matter even after out-of-state travel is considered.</p>
+
+      <ul>
+        <li><strong>Single outcome focus:</strong> By using resident abortion rate alone, the chart suppresses the resident-versus-in-state mismatch that dominated the first figure.</li>
+        <li><strong>Composite burden score:</strong> Multiple barriers are combined into one variable, making access restriction look more comprehensive and more analytically authoritative.</li>
+        <li><strong>Trend line and quadrants:</strong> The regression line and average reference lines stabilize the interpretation and help the reader quickly identify the “high burden, low rate” pattern.</li>
+        <li><strong>Selective labeling:</strong> Only a small number of strategically chosen states are labeled, guiding attention toward examples that reinforce the anti-position.</li>
+      </ul>
+    </div>
+
+    <h2>Final Reflection</h2>
+
+    <p>
+      What changed across these two visualizations was not the underlying dataset, but the operational definition of what counted as evidence. In the first chart, I emphasized the mismatch between in-state and resident abortion rates, encouraging the reader to see low in-state rates as signs of displacement rather than disappearance. In the second chart, I treated resident abortion rate as the primary outcome and collapsed multiple access barriers into a single explanatory measure, which made the overall pattern read as “higher barriers, lower rates.”
+    </p>
+
+    <p>
+      This exercise made clear that persuasive visualization often depends less on obvious distortion than on quieter decisions about framing, aggregation, and variable selection. The most effective manipulations were not dramatic color choices, but decisions about what to compare, what to hide, and which reading to make feel natural first. In that sense, the line between persuasion and deception is not fixed; it often lies in whether the chart still leaves room for an alternative interpretation to remain visible.
+    </p>
+
+  </div>
+</body>
+</html>
