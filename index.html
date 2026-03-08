@@ -274,18 +274,6 @@
       color: var(--green);
     }
 
-    .mini-note{
-      margin-top: 16px;
-      padding: 14px 16px;
-      border-radius: 14px;
-      border:1px solid #eadfb3;
-      background:#fff8e7;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      font-size:14px;
-      line-height:1.65;
-      color:#6a5600;
-    }
-
     .reflection{
       margin-top: 8px;
     }
@@ -446,17 +434,19 @@
 
       <h2>Visualization 2 — Against the Proposition</h2>
       <p class="section-intro">
-        The second visualization argues the opposite by changing the frame of analysis. Rather than highlighting displacement between
-        two measures, it treats resident abortion rate as the central outcome and asks whether greater access barriers still align with lower rates.
+        The second visualization argues against the proposition by redefining what “access burden” means as a single composite score.
+        Instead of foregrounding the mismatch between in-state and resident abortion rates, this chart treats resident abortion rate as
+        the main outcome and uses a calculated field to summarize several dimensions of abortion access into one explanatory variable.
       </p>
 
       <figure>
         <img src="img/2.png" alt="Visualization 2 arguing against the proposition">
         <figcaption>
-          <div class="cap-title">Figure 2 — AGAINST: Higher access barriers still align with lower resident abortion rates</div>
-          This scatterplot uses resident abortion rate as the primary dependent variable and a composite Access Burden Score as the
-          explanatory condition. Regression, quadrant structure, and selective emphasis guide the viewer toward the interpretation that
-          barriers still matter even if some care is displaced.
+          <div class="cap-title">Figure 2 — AGAINST: Higher access burdens still align with lower resident abortion rates</div>
+          This scatterplot reframes the question by plotting resident abortion rate against a calculated Access Burden Score. Rather than
+          using one raw indicator, the score combines clinic absence, county-level clinic scarcity, and out-of-state travel into a single
+          weighted measure of restriction. Regression, quadrant framing, and selective emphasis then guide the viewer toward the interpretation
+          that greater barriers still correspond with lower abortion rates among residents.
           <div class="cap-meta">Source: Guttmacher Institute abortion data by state, 2020.</div>
         </figcaption>
       </figure>
@@ -468,57 +458,68 @@
         </div>
 
         <p>
-          This chart works by suppressing the comparison that was central in Figure 1. Once the reader is no longer asked to compare
-          in-state and resident rates, the relocation story recedes. In its place, a new story becomes dominant: states with heavier
-          burdens of restriction tend to sit lower on resident abortion rate.
+          This chart works by changing both the question and the unit of interpretation. Instead of asking whether abortion care has been
+          displaced across state lines, it asks whether states facing heavier access barriers still show lower abortion rates among their
+          own residents. That shift matters because it suppresses the comparison that made relocation visible in Figure 1 and replaces it
+          with a cleaner relationship between “burden” and “rate.”
         </p>
 
         <p>
-          Much of the persuasion here comes from constructed coherence. I combine multiple restriction variables into one burden score,
-          add a regression line to impose directional order on a noisy cloud, and use quadrant shading so that the lower-right corner
-          becomes the chart’s rhetorical destination. These moves are not fabricated, but they simplify a more ambiguous field of
-          evidence into a cleaner anti-proposition narrative.
+          The most important transformation in this figure is the construction of the Access Burden Score, a calculated field that combines
+          three separate indicators into one weighted variable:
+          <em>0.5 × % of women aged 15–44 living in a county without a clinic</em>,
+          <em>0.3 × % of counties without a known clinic</em>, and
+          <em>0.2 × % of residents obtaining abortions who traveled out of state for care</em>.
+          I weighted the first term most heavily because it most directly represents how much of the reproductive-age population lacks local
+          clinic access. I weighted county-level clinic absence second because it captures geographic scarcity at a territorial scale, but
+          it is less population-sensitive. I weighted out-of-state travel third because it is partly an outcome of burden rather than a pure
+          precondition, yet it still strengthens the sense that access obstacles are materially consequential. This transformation is partly
+          earnest and partly rhetorical: earnest because it synthesizes several relevant access measures into one interpretable variable, and
+          rhetorical because the weighting scheme reflects my own judgment about which kinds of restriction should count most.
         </p>
 
         <ul class="score-list">
           <li>
+            <span class="score neutral">Score: +0.5</span>
+            <strong>Constructing a weighted Access Burden Score.</strong>
+            I created a calculated field rather than relying on any one raw variable. The score combines
+            <em>% of women aged 15–44 living in a county without a clinic</em>,
+            <em>% of counties without a known clinic</em>, and
+            <em>% of residents obtaining abortions who traveled out of state for care</em>,
+            weighted at 0.5, 0.3, and 0.2 respectively. This is an analytically meaningful transformation because it turns multiple dimensions
+            of access into one interpretable axis, but it is also rhetorical because the weights encode my own judgment about what should count
+            most as “burden.”
+          </li>
+
+          <li>
+            <span class="score">Score: -1</span>
+            <strong>Choosing population exposure as the dominant component.</strong>
+            By assigning the largest weight to the share of women aged 15–44 living in a county without a clinic, I made the burden score feel
+            population-centered rather than purely geographic. This is defensible, since access ultimately affects people rather than counties,
+            but it also helps the variable appear more substantively grounded and therefore more persuasive.
+          </li>
+
+          <li>
             <span class="score">Score: -1.5</span>
             <strong>Using resident abortion rate as the only outcome variable.</strong>
-            This is persuasive because it removes the in-state versus resident mismatch that made displacement visible in Figure 1.
-            The reader is no longer invited to ask where abortions occurred, only whether rates are lower in high-barrier states.
-            That reframing is legitimate, but strategically narrow.
-          </li>
-
-          <li>
-            <span class="score neutral">Score: +0.5</span>
-            <strong>Constructing a composite Access Burden Score.</strong>
-            This is partly earnest and partly rhetorical. On the earnest side, combining multiple restrictions into a single index is a
-            defensible analytical transformation that creates a more holistic variable than any one rule or provider count alone. On the
-            rhetorical side, the score appears authoritative and unified, which can make a contested construction feel more natural than it really is.
+            This choice removes the in-state versus resident comparison that drove Figure 1. Once that displacement frame disappears, the reader
+            is guided toward a different interpretation: not where abortions happened, but whether residents in high-burden states still have
+            lower abortion rates overall.
           </li>
 
           <li>
             <span class="score">Score: -1</span>
-            <strong>Adding a regression line.</strong>
-            The regression line gives the viewer an immediate takeaway and reduces the apparent ambiguity of the scatterplot. It is not
-            false, but it encourages the eye to read trend before dispersion. This makes the anti-position feel stronger and cleaner than
-            the raw cloud of points would on its own.
+            <strong>Adding a regression line to stabilize the story.</strong>
+            The regression line transforms a noisy cloud into an interpretable negative relationship. It does not falsify the data, but it makes
+            the anti-position easier to read because the viewer is encouraged to see direction before dispersion.
           </li>
 
           <li>
             <span class="score">Score: -1.5</span>
-            <strong>Darkening the lower-right quadrant and its points.</strong>
-            I specifically wanted the reader to focus on the region representing high burden and low resident rate, so I made that area
-            darker both in the background and in the marks. This channels attention toward the examples that best support the anti-claim.
-            The data are unchanged, but the hierarchy of attention is deliberately unequal.
-          </li>
-
-          <li>
-            <span class="score">Score: -1</span>
-            <strong>Selective labeling and affective red framing.</strong>
-            I only label a subset of states, chosen because they help stabilize the chart’s directional reading. The red palette also
-            adds urgency and consequence, making the emphasized region feel like the place where the “real” conclusion lies. These are
-            subtle persuasive choices rather than outright falsifications.
+            <strong>Directing attention to the lower-right quadrant through color and framing.</strong>
+            I darkened the lower-right quadrant and strengthened the points located there because that region best supports the anti-claim:
+            higher burden, lower resident rate. This is a deliberate persuasive move. The values themselves are unchanged, but visual hierarchy
+            makes that corner feel like the chart’s natural conclusion.
           </li>
         </ul>
       </div>
@@ -533,6 +534,15 @@
           variable and the explanatory frame, collapsing multiple restrictions into a burden score and asking the reader to interpret
           resident abortion rate as the primary outcome. The same dataset therefore supported two opposed narratives not because one
           was fabricated, but because each chart selectively elevated a different structure within the data.
+        </p>
+
+        <p>
+          The calculated field in Figure 2 was especially important to my thinking about ethics. On one hand, it felt like a sincere analytical
+          move: no single raw variable fully captured abortion access, so combining several indicators into one score made the visualization more
+          legible and conceptually coherent. On the other hand, the score was never neutral. I had to decide which variables belonged inside it,
+          which ones did not, and how much weight each should carry. In that sense, the field did not merely measure burden; it also authored it.
+          The resulting chart therefore reflects not only the dataset, but my own judgment about what kinds of restriction matter most and how
+          they should be aggregated into evidence.
         </p>
 
         <p>
@@ -610,11 +620,6 @@
           acceptable persuasion and misleading design is real but unstable: it is less a border we can draw once and for all than a
           responsibility we have to renegotiate each time we turn data into a visual argument.
         </p>
-      </div>
-
-      <div class="mini-note">
-        Image paths assumed in this page: <strong>img/1.png</strong>, <strong>img/2.png</strong>, <strong>img/3.png</strong>,
-        <strong>img/4.png</strong>, <strong>img/5.png</strong>, and <strong>img/6.png</strong>.
       </div>
 
     </main>
