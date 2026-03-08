@@ -7,97 +7,170 @@
 
   <style>
     :root{
-      --bg: #ffffff;
-      --text: #1a1a1a;
-      --muted: #555;
-      --muted2:#6b7280;
-      --border:#e6e6e6;
-      --card:#f6f6f6;
-      --shadow: 0 6px 18px rgba(0,0,0,0.06);
-      --radius: 14px;
-      --max: 900px;
+      --bg: #f7f8fa;
+      --paper: #ffffff;
+      --text: #16181d;
+      --muted: #5e6470;
+      --muted-2: #7b818c;
+      --line: #e5e9ef;
+      --line-2: #d8dee8;
+      --blue: #1f4f82;
+      --blue-soft: #eaf2fb;
+      --red: #9b1c1c;
+      --red-soft: #fdeeee;
+      --green: #1f6b42;
+      --green-soft: #edf8f1;
+      --card: #f9fbfd;
+      --shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+      --radius: 16px;
+      --max: 980px;
     }
 
-    *{ box-sizing:border-box; }
+    *{ box-sizing: border-box; }
+
+    html{ scroll-behavior: smooth; }
 
     body{
       margin:0;
-      background:var(--bg);
+      background: linear-gradient(180deg, #f3f6fa 0%, #f7f8fa 160px, #f7f8fa 100%);
       color:var(--text);
       font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-      line-height:1.7;
-      padding:56px 18px;
+      line-height:1.75;
+      padding: 52px 18px 72px;
     }
 
     .container{
       max-width: var(--max);
-      margin:0 auto;
+      margin: 0 auto;
+    }
+
+    .page{
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 42px 42px 56px;
     }
 
     header{
-      margin-bottom:28px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 28px;
+    }
+
+    .eyebrow{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
     h1{
-      font-size: 30px;
-      line-height:1.15;
-      margin:0 0 10px;
-      letter-spacing:-0.2px;
+      margin:0 0 12px;
+      font-size: 36px;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color:#0f1728;
     }
 
-    .author{
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    .subtitle{
+      max-width: 780px;
+      margin:0 0 16px;
+      font-size: 17px;
       color: var(--muted);
-      font-size: 14px;
-      margin-top: 4px;
     }
 
-    .author a{
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 12px;
+      align-items:center;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-size:14px;
+      color: var(--muted);
+    }
+
+    .meta a{
       color: inherit;
       text-decoration: none;
-      border-bottom:1px dotted var(--border);
+      border-bottom: 1px dotted #c8ced8;
     }
 
-    .divider{
-      height:1px;
-      background:var(--border);
-      margin:18px 0 10px;
+    .pill{
+      display:inline-block;
+      padding:4px 10px;
+      border-radius:999px;
+      border:1px solid #dce4ef;
+      background:#f5f8fc;
+      color:#334155;
+      font-size:12px;
+      font-weight:600;
     }
 
     h2{
-      font-size: 20px;
-      margin: 34px 0 12px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border);
-      letter-spacing:-0.1px;
+      margin: 38px 0 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line-2);
+      font-size: 24px;
+      line-height:1.2;
+      letter-spacing:-0.02em;
+      color:#111827;
     }
 
     h3{
+      margin: 0 0 10px;
       font-size: 18px;
-      margin: 22px 0 10px;
-      color:#222;
+      line-height: 1.3;
+      color:#111827;
     }
 
     p{
-      margin: 0 0 14px;
+      margin: 0 0 16px;
       text-align: justify;
+      font-size: 17px;
     }
 
-    ul{
-      margin: 10px 0 18px 22px;
-      padding:0;
+    .question{
+      border:1px solid var(--line);
+      border-radius: 16px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbfe 100%);
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+      margin: 18px 0 8px;
     }
 
-    li{
-      margin: 8px 0;
+    .label{
+      display:block;
+      margin-bottom:8px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:0.1em;
+      text-transform:uppercase;
+      color:#6b7280;
+    }
+
+    .question p{
+      margin:0;
+      text-align:left;
+      font-size:18px;
+      line-height:1.6;
+    }
+
+    .section-intro{
+      margin: 0 0 16px;
+      color: var(--muted);
     }
 
     figure{
-      margin: 18px 0 28px;
-      border: 1px solid var(--border);
+      margin: 20px 0 18px;
+      border: 1px solid var(--line);
       border-radius: var(--radius);
       overflow: hidden;
-      background: #fff;
+      background:#fff;
       box-shadow: var(--shadow);
     }
 
@@ -108,202 +181,443 @@
     }
 
     figcaption{
-      background: var(--card);
-      border-top: 1px solid var(--border);
-      padding: 12px 14px 14px;
+      padding: 14px 16px 15px;
+      border-top:1px solid var(--line);
+      background: linear-gradient(180deg, #fbfcfe 0%, #f6f8fb 100%);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      color: var(--muted2);
-      font-size: 13.5px;
-      line-height: 1.55;
+      font-size:14px;
+      line-height:1.65;
+      color: var(--muted-2);
     }
 
     .cap-title{
-      font-weight: 700;
-      color:#374151;
+      font-weight:700;
+      color:#334155;
       margin-bottom:6px;
-      font-size: 13.5px;
     }
 
     .cap-meta{
       margin-top:8px;
-      font-size: 12.5px;
-      color:#8a8f98;
+      font-size:12.5px;
+      color:#89919d;
     }
 
     .analysis-block{
-      margin: 0 0 30px;
-      padding: 14px 16px;
-      border-left: 3px solid #e5e7eb;
-      background: #fafafa;
-      border-radius: 10px;
+      margin: 0 0 34px;
+      border:1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, #ffffff 0%, #f9fbfd 100%);
+      box-shadow: var(--shadow);
+      padding: 20px 22px;
     }
 
-    .analysis-block strong{
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      font-size: 14px;
+    .analysis-head{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
     }
 
-    .pill{
+    .tag{
       display:inline-block;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       font-size:12px;
-      color:#374151;
-      background:#f3f4f6;
-      border:1px solid #e5e7eb;
-      padding:3px 10px;
-      border-radius:999px;
-      margin-right:8px;
-      margin-top:8px;
-    }
-
-    .question{
-      margin: 18px 0 22px;
-      padding: 16px 18px;
-      background: #fbfbfb;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-    }
-
-    .question .label{
-      display:block;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      font-size: 12px;
-      color:#6b7280;
+      font-weight:700;
       letter-spacing:0.08em;
-      text-transform: uppercase;
-      margin-bottom:6px;
+      text-transform:uppercase;
+      padding:5px 10px;
+      border-radius:999px;
+      border:1px solid #d7e3f4;
+      background: var(--blue-soft);
+      color:#355a84;
     }
 
-    .question p{
+    .score-list{
+      list-style:none;
+      margin: 18px 0 0;
+      padding:0;
+      display:grid;
+      gap:12px;
+    }
+
+    .score-list li{
       margin:0;
-      text-align:left;
+      padding:14px 16px;
+      border:1px solid #e6ebf2;
+      border-radius: 13px;
+      background:#fbfcfe;
     }
 
     .score{
+      display:inline-block;
+      margin-right:8px;
+      margin-bottom:8px;
+      padding:3px 10px;
+      border-radius:999px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-size:12.5px;
       font-weight:700;
-      color:#374151;
+      border:1px solid #ebd1d1;
+      background: var(--red-soft);
+      color: var(--red);
+    }
+
+    .score.neutral{
+      border-color:#dfe5ec;
+      background:#f5f7fa;
+      color:#4b5563;
+    }
+
+    .score.earnest{
+      border-color:#cfe7d7;
+      background: var(--green-soft);
+      color: var(--green);
+    }
+
+    .mini-note{
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border:1px solid #eadfb3;
+      background:#fff8e7;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-size:14px;
+      line-height:1.65;
+      color:#6a5600;
+    }
+
+    .reflection{
+      margin-top: 8px;
+    }
+
+    .reflection p{
+      font-size:17.5px;
+    }
+
+    .image-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .image-grid figure{
+      margin:0;
+    }
+
+    .closing{
+      margin-top: 20px;
+      padding: 18px 20px;
+      border:1px solid #d8e4f0;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #f8fbff 0%, #eef5fc 100%);
+    }
+
+    .closing p:last-child{
+      margin-bottom:0;
+    }
+
+    @media (max-width: 820px){
+      .page{
+        padding: 28px 20px 42px;
+      }
+
+      h1{ font-size: 30px; }
+      h2{ font-size: 22px; }
+      p{ font-size:16px; }
+
+      .question p{
+        font-size:17px;
+      }
+
+      .image-grid{
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
   <div class="container">
+    <main class="page">
 
-    <header>
-      <h1>Assignment 4: Persuasive or Deceptive Visualization?</h1>
-      <div class="author">
-        <div><strong>Shengtao Shen</strong> · <a href="mailto:sstheo@mit.edu">sstheo@mit.edu</a></div>
-        <div>Interactive Visualization and Society</div>
-        <div class="pill">A4</div><div class="pill">Guttmacher Institute Abortion Data by State</div>
+      <header>
+        <div class="eyebrow">Interactive Visualization and Society · Assignment 4</div>
+        <h1>Persuasive or Deceptive Visualization?</h1>
+        <p class="subtitle">
+          This report uses the same Guttmacher Institute state-level abortion dataset to construct two opposed visual arguments.
+          Rather than treating visualization as neutral reporting, I treat it as a rhetorical practice shaped by data selection,
+          transformation, emphasis, and framing.
+        </p>
+        <div class="meta">
+          <span><strong>Shengtao Shen</strong></span>
+          <span><a href="mailto:sstheo@mit.edu">sstheo@mit.edu</a></span>
+          <span class="pill">A4</span>
+          <span class="pill">Guttmacher Institute Abortion Data by State</span>
+        </div>
+      </header>
+
+      <h2>Proposition</h2>
+      <div class="question">
+        <span class="label">Proposition</span>
+        <p>Abortion bans and clinic scarcity do not reduce abortion need; they primarily relocate where abortion care is recorded.</p>
       </div>
-      <div class="divider"></div>
-    </header>
 
-    <h2>Proposition</h2>
-
-    <div class="question">
-      <span class="label">Proposition</span>
-      <p>
-        Abortion bans and clinic scarcity do not reduce abortion need; they primarily relocate where abortion care is recorded.
+      <h2>Visualization 1 — For the Proposition</h2>
+      <p class="section-intro">
+        The first visualization argues that low in-state abortion counts are not evidence of low need. Instead, the most revealing
+        signal is the gap between abortions occurring inside a state and abortions obtained by that state’s residents.
       </p>
-    </div>
 
-    <h2>Visualization 1 — For the Proposition</h2>
+      <figure>
+        <img src="img/1.png" alt="Visualization 1 supporting the proposition">
+        <figcaption>
+          <div class="cap-title">Figure 1 — FOR: Abortion bans don’t reduce need, they relocate where care is recorded</div>
+          This chart compares in-state abortion rates with resident abortion rates across states where the mismatch between the two
+          measures is most pronounced. The span between the endpoints makes relocation legible as a visual gap rather than a hidden
+          statistical discrepancy.
+          <div class="cap-meta">Source: Guttmacher Institute abortion data by state, 2020.</div>
+        </figcaption>
+      </figure>
 
-    <figure>
-      <img src="img/1.png" alt="Visualization 1 supporting the proposition">
-      <figcaption>
-        <div class="cap-title">Figure 1 — FOR: Abortion bans don’t reduce need, only relocate care</div>
-        This chart compares in-state abortion rates with resident abortion rates across a selected set of states where the mismatch is strongest. The long horizontal spans visually emphasize states where abortion care appears much lower when measured by in-state occurrence than when measured by the experiences of state residents.
-        <div class="cap-meta">Source: Guttmacher Institute abortion data by state, 2020.</div>
-      </figcaption>
-    </figure>
+      <div class="analysis-block">
+        <div class="analysis-head">
+          <span class="tag">Design rationale</span>
+          <h3>How this visualization was made persuasive</h3>
+        </div>
 
-    <div class="analysis-block">
-      <p><strong>How this chart argues for the proposition:</strong> This visualization supports the proposition by framing low in-state abortion rates as incomplete evidence. Instead of asking only how many abortions occur within a state, it compares that number to the abortion rate among people who live in that state. Where the resident rate remains much higher than the in-state rate, the chart suggests that abortion need has not disappeared, but that abortion care has simply become less visible locally and more likely to occur elsewhere.</p>
+        <p>
+          This figure persuades by redefining what should count as the meaningful measure. If the viewer only sees abortions that
+          happened inside a state, low values can look like a decline in need. By juxtaposing those values with the abortion rate
+          among residents of the same state, the chart instead suggests that need persists even when care has become geographically
+          displaced.
+        </p>
 
-      <p>The figure becomes persuasive because it is not organized neutrally. First, it focuses on a subset of states where the mismatch is especially large, so the reader is immediately confronted with the strongest examples rather than the most representative national average. Second, the chart is ordered so that the most dramatic cases appear first, encouraging the reader to interpret the remaining examples through that same frame. Once Missouri appears as the opening case, the rest of the graphic reads as further confirmation rather than as mixed evidence.</p>
+        <p>
+          The argument depends on both an earnest analytical move and a selective rhetorical one. The earnest move is the comparison
+          itself: resident rate and occurrence rate are genuinely different measures, and comparing them surfaces an important policy
+          distinction. The selective move is that I center the states where this discrepancy is strongest, sort them by gap size, and
+          visually emphasize the metric I want the reader to trust most. The chart therefore does not invent a pattern, but it does
+          organize the page so that one interpretation becomes much easier to see than competing alternatives.
+        </p>
 
-      <p>The title also performs substantial rhetorical work. Rather than simply describing a comparison between two rates, it interprets the gap as proof that abortion bans “relocate care.” That is a stronger claim than the marks alone can fully establish, but it gives the viewer a causal explanation before they begin reading the data closely. In that sense, the title turns an observed mismatch into a political conclusion.</p>
+        <ul class="score-list">
+          <li>
+            <span class="score earnest">Score: +1.5</span>
+            <strong>Comparing resident rate to in-state occurrence rate.</strong>
+            This is the most important analytical choice in the entire project, and I consider it largely earnest. The two measures
+            answer genuinely different questions, and placing them in the same frame helps reveal that “where abortions are recorded”
+            is not the same as “whether residents seek abortions.” It makes the proposition legible without distorting the underlying values.
+          </li>
 
-      <p>Color is another major part of the persuasion. I intentionally made the values I most wanted the viewer to notice darker and more visually dominant. The resident-related endpoint is encoded with the darkest and most saturated color, while the in-state endpoint is visually weaker. This means the eye is naturally pulled toward the resident value first, making it feel like the truer or more important number. That choice strengthens the chart’s argument because it quietly teaches the viewer which metric should count as reality.</p>
+          <li>
+            <span class="score">Score: -1.5</span>
+            <strong>Filtering to states with the largest mismatch.</strong>
+            I did not show all states equally. Instead, I selected the cases where the difference between resident and in-state rates
+            is strongest, because those are the states that best support the proposition. This is persuasive because it compresses the
+            reader’s attention around the strongest evidence, but it is also selective because smaller or contradictory cases disappear.
+          </li>
 
-      <p>The same is true of emphasis more broadly: the most supportive cases are not only sorted first, but also visually intensified. The strongest spans are longer, darker, and more heavily annotated. These choices do not fabricate data, but they do shape what the reader sees first, remembers most, and interprets as central.</p>
+          <li>
+            <span class="score">Score: -1</span>
+            <strong>Sorting by gap size rather than alphabetically or regionally.</strong>
+            Ordering the states from the largest mismatch downward turns a collection of examples into an apparent ranked pattern.
+            This makes the proposition feel systematic and cumulative. The move is subtle, but it strongly shapes what the reader notices first.
+          </li>
 
-      <ul>
-        <li><span class="score">Score: -2</span> <strong>Filtering to a subset of high-mismatch states.</strong> I did not show all states equally. Instead, I selected states where the gap between resident abortion rate and in-state abortion rate is especially large. This is the most consequential persuasive move because it concentrates the chart around the strongest supporting evidence and suppresses weaker counterexamples.</li>
+          <li>
+            <span class="score neutral">Score: -0.5</span>
+            <strong>Using a span-based encoding rather than two detached points or bars.</strong>
+            The span is analytically useful because it makes the difference between the two rates immediately visible. At the same time,
+            it also dramatizes the gap: long horizontal distances feel consequential in a way that separate bars might not. I see this
+            as a mixed choice—honest in structure, but rhetorically strong in effect.
+          </li>
 
-        <li><span class="score">Score: -1</span> <strong>Sorting states by mismatch strength.</strong> The figure is ordered to make the most dramatic cases appear first. This creates the impression of a ranked, systematic pattern rather than a scattered comparison. The ordering itself helps transform a set of cases into an argument.</li>
+          <li>
+            <span class="score">Score: -1.5</span>
+            <strong>Color hierarchy and title framing.</strong>
+            I intentionally made the resident-related endpoint darker and visually heavier, so the viewer’s eye is pulled toward the
+            measure I want to count as reality. The title goes a step further by interpreting the gap as “relocation,” which is a
+            plausible reading but still a stronger causal claim than the marks alone can prove. Together, color and language quietly
+            steer interpretation before the reader begins to evaluate the data on their own.
+          </li>
+        </ul>
+      </div>
 
-        <li><span class="score">Score: 1</span> <strong>Using a span-based comparison rather than two disconnected values.</strong> The range-style encoding is analytically useful because it makes the difference between the two rates instantly legible. Even without persuasive framing, this is an appropriate visual form for the comparison being made.</li>
+      <h2>Visualization 2 — Against the Proposition</h2>
+      <p class="section-intro">
+        The second visualization argues the opposite by changing the frame of analysis. Rather than highlighting displacement between
+        two measures, it treats resident abortion rate as the central outcome and asks whether greater access barriers still align with lower rates.
+      </p>
 
-        <li><span class="score">Score: -1.5</span> <strong>Color hierarchy to direct attention.</strong> I intentionally made the data I most wanted the reader to notice darker and more saturated. The resident endpoint is visually dominant, so the eye is drawn there first. This increases persuasiveness by encouraging the viewer to treat the resident rate as the more meaningful reality.</li>
+      <figure>
+        <img src="img/2.png" alt="Visualization 2 arguing against the proposition">
+        <figcaption>
+          <div class="cap-title">Figure 2 — AGAINST: Higher access barriers still align with lower resident abortion rates</div>
+          This scatterplot uses resident abortion rate as the primary dependent variable and a composite Access Burden Score as the
+          explanatory condition. Regression, quadrant structure, and selective emphasis guide the viewer toward the interpretation that
+          barriers still matter even if some care is displaced.
+          <div class="cap-meta">Source: Guttmacher Institute abortion data by state, 2020.</div>
+        </figcaption>
+      </figure>
 
-        <li><span class="score">Score: -1</span> <strong>Using color to amplify the strongest evidence.</strong> Beyond simple differentiation, color here functions as emphasis. The darkest values attract attention and make the most supportive states feel more important. This is not a neutral use of color; it is a way of controlling visual hierarchy in favor of the proposition.</li>
+      <div class="analysis-block">
+        <div class="analysis-head">
+          <span class="tag">Design rationale</span>
+          <h3>How this visualization was made persuasive</h3>
+        </div>
 
-        <li><span class="score">Score: -1.5</span> <strong>Title framing the comparison as causal relocation.</strong> The title does not simply describe the figure. It tells the reader what conclusion to draw: abortion bans do not reduce need, they relocate care. That interpretation is plausible, but stronger than the chart alone can definitively prove.</li>
+        <p>
+          This chart works by suppressing the comparison that was central in Figure 1. Once the reader is no longer asked to compare
+          in-state and resident rates, the relocation story recedes. In its place, a new story becomes dominant: states with heavier
+          burdens of restriction tend to sit lower on resident abortion rate.
+        </p>
 
-        <li><span class="score">Score: -0.5</span> <strong>Missouri callout as a rhetorical anchor.</strong> Highlighting the most extreme example makes the argument feel immediate and memorable. The callout uses real data, but it also invites the reader to generalize from the strongest case outward.</li>
-      </ul>
-    </div>
+        <p>
+          Much of the persuasion here comes from constructed coherence. I combine multiple restriction variables into one burden score,
+          add a regression line to impose directional order on a noisy cloud, and use quadrant shading so that the lower-right corner
+          becomes the chart’s rhetorical destination. These moves are not fabricated, but they simplify a more ambiguous field of
+          evidence into a cleaner anti-proposition narrative.
+        </p>
 
-    <h2>Visualization 2 — Against the Proposition</h2>
+        <ul class="score-list">
+          <li>
+            <span class="score">Score: -1.5</span>
+            <strong>Using resident abortion rate as the only outcome variable.</strong>
+            This is persuasive because it removes the in-state versus resident mismatch that made displacement visible in Figure 1.
+            The reader is no longer invited to ask where abortions occurred, only whether rates are lower in high-barrier states.
+            That reframing is legitimate, but strategically narrow.
+          </li>
 
-    <figure>
-      <img src="img/2.png" alt="Visualization 2 arguing against the proposition">
-      <figcaption>
-        <div class="cap-title">Figure 2 — AGAINST: Higher access barriers still align with lower resident abortion rates</div>
-        This scatterplot reframes the question by treating resident abortion rate as the primary outcome and a composite access burden score as the explanatory variable. The downward trend, selective labels, and emphasized lower-right quadrant all encourage the reader to interpret high barriers as still associated with lower abortion rates overall.
-        <div class="cap-meta">Source: Guttmacher Institute abortion data by state, 2020.</div>
-      </figcaption>
-    </figure>
+          <li>
+            <span class="score neutral">Score: +0.5</span>
+            <strong>Constructing a composite Access Burden Score.</strong>
+            This is partly earnest and partly rhetorical. On the earnest side, combining multiple restrictions into a single index is a
+            defensible analytical transformation that creates a more holistic variable than any one rule or provider count alone. On the
+            rhetorical side, the score appears authoritative and unified, which can make a contested construction feel more natural than it really is.
+          </li>
 
-    <div class="analysis-block">
-      <p><strong>How this chart argues against the proposition:</strong> This visualization takes the opposite position by changing the question. Instead of asking where abortions are performed, it asks whether states with greater barriers to access still show lower abortion rates among residents. That shift is crucial. Once the in-state versus resident comparison disappears, the displacement argument loses visibility and the overall relationship between barriers and rates becomes the dominant reading.</p>
+          <li>
+            <span class="score">Score: -1</span>
+            <strong>Adding a regression line.</strong>
+            The regression line gives the viewer an immediate takeaway and reduces the apparent ambiguity of the scatterplot. It is not
+            false, but it encourages the eye to read trend before dispersion. This makes the anti-position feel stronger and cleaner than
+            the raw cloud of points would on its own.
+          </li>
 
-      <p>The x-axis uses a composite Access Burden Score, which combines several restrictions into a single variable. This makes the chart look more comprehensive and more analytically authoritative than a single clinic-access measure would. It also creates a stronger sense that the x-axis represents a real and total burden, which helps the anti-position appear more systematic and credible.</p>
+          <li>
+            <span class="score">Score: -1.5</span>
+            <strong>Darkening the lower-right quadrant and its points.</strong>
+            I specifically wanted the reader to focus on the region representing high burden and low resident rate, so I made that area
+            darker both in the background and in the marks. This channels attention toward the examples that best support the anti-claim.
+            The data are unchanged, but the hierarchy of attention is deliberately unequal.
+          </li>
 
-      <p>The trend line and the quadrant structure do most of the rhetorical work. The regression line organizes a noisy cloud of points into a clean downward story, while the horizontal and vertical average lines divide the chart into simple interpretive zones. This makes the lower-right quadrant feel like a meaningful conclusion: high burden, low resident rate. Once the chart is divided in this way, the reader is naturally guided toward that region as the place where the anti-argument “lives.”</p>
+          <li>
+            <span class="score">Score: -1</span>
+            <strong>Selective labeling and affective red framing.</strong>
+            I only label a subset of states, chosen because they help stabilize the chart’s directional reading. The red palette also
+            adds urgency and consequence, making the emphasized region feel like the place where the “real” conclusion lies. These are
+            subtle persuasive choices rather than outright falsifications.
+          </li>
+        </ul>
+      </div>
 
-      <p>Color and background emphasis intensify that effect. I intentionally wanted viewers to pay special attention to the lower-right quadrant, so I darkened both the points in that region and the background of that quadrant itself. This makes the points there feel more visually important than equally valid points elsewhere in the chart. The viewer’s attention is not spread evenly across the scatterplot; it is pulled toward the part of the chart that most strongly supports the anti-position.</p>
+      <h2>Final Reflection</h2>
 
-      <p>The use of red also matters. Red carries emotional and perceptual weight: it feels urgent, consequential, and heightened. By using a red-based palette and deepening the tones in the lower-right region, I make that area feel more significant and more decisive than the rest of the graph. In other words, color here is not merely descriptive; it is affective. It helps the chart produce a feeling that “something important is happening here,” which strengthens the argument beyond the trend line alone.</p>
+      <div class="reflection">
+        <p>
+          What changed between these two visualizations was not the dataset, but the definition of what counted as evidence and the
+          social role I asked the chart to play. In Figure 1, I foregrounded the gap between resident and in-state abortion rates,
+          which made displacement visible and made low in-state values look incomplete. In Figure 2, I changed both the dependent
+          variable and the explanatory frame, collapsing multiple restrictions into a burden score and asking the reader to interpret
+          resident abortion rate as the primary outcome. The same dataset therefore supported two opposed narratives not because one
+          was fabricated, but because each chart selectively elevated a different structure within the data.
+        </p>
 
-      <p>Selective labeling extends the same logic. Only a small set of states are named, and they are chosen because they reinforce the structure of the argument: low-burden, high-rate states in the upper-left and high-burden, low-rate states in the lower-right. These labels create narrative anchors that make the chart feel easier to interpret and more conclusive than it actually is.</p>
+        <p>
+          This process made me much less confident that there is a stable formal boundary between “persuasive” and “deceptive”
+          visualization. Some of my choices were clearly strategic, such as filtering, ordering, selective labeling, and using color
+          hierarchy to pull attention toward the evidence that best supported each side. But other choices felt genuinely informative:
+          comparing two distinct abortion measures in Figure 1, or constructing a burden index in Figure 2 to summarize multiple access
+          restrictions in one interpretable variable. What unsettled me is that the same technique can look ethical or manipulative
+          depending on context, transparency, and audience. A transformation can be both analytically meaningful and rhetorically loaded.
+          A title can help readers understand a point, but also silently pre-interpret it. Visualization is therefore not just a matter
+          of showing data; it is a matter of staging a relationship between evidence, author, and reader.
+        </p>
 
-      <ul>
-        <li><span class="score">Score: -2</span> <strong>Using only resident abortion rate as the outcome.</strong> By removing the in-state versus resident comparison that dominated Figure 1, I suppress the displacement story and redefine what the reader should treat as the meaningful measure of abortion incidence.</li>
+        <p>
+          The images below helped me think about that relationship more clearly. They suggest that a visualization is rarely “just”
+          information. It can be an invitation to notice, a prompt to act, a lure into discussion, or even a reflection of the
+          creator’s own socio-cultural position. In other words, a chart nearly always presupposes a recipient and imagines a response.
+          Once I started thinking this way, I realized that my own charts were never neutral containers. Each one anticipated a viewer,
+          guided their attention, and quietly hoped they would leave with a particular interpretation. Ethical visualization, then,
+          may not mean eliminating rhetoric altogether; it may mean recognizing that rhetoric is always present, and taking
+          responsibility for how strongly, how selectively, and how invisibly we deploy it.
+        </p>
+      </div>
 
-        <li><span class="score">Score: -1</span> <strong>Constructing a composite Access Burden Score.</strong> Combining multiple barriers into a single variable makes the chart feel more comprehensive and more analytically authoritative, even though the score itself is a constructed choice.</li>
+      <div class="image-grid">
+        <figure>
+          <img src="img/3.png" alt="A cartoon about our persuasive data visualization versus their deceptive data visualization">
+          <figcaption>
+            <div class="cap-title">Figure 3 — The instability of the boundary between persuasion and deception</div>
+            This image captures the central irony of the assignment: what one side calls “annotation,” “color scale,” or “outlier removal,”
+            another side may call “commentary,” “manipulation,” or “data deletion.”
+          </figcaption>
+        </figure>
 
-        <li><span class="score">Score: -1</span> <strong>Adding a regression line.</strong> The trend line transforms a noisy cloud into a coherent negative relationship. It gives the reader a ready-made interpretation and reduces the sense of ambiguity in the scatterplot.</li>
+        <figure>
+          <img src="img/4.png" alt="A diagram suggesting visualization may simply inform without a specific call to action">
+          <figcaption>
+            <div class="cap-title">Figure 4 — A visualization can be intended to inform</div>
+            Not every chart demands immediate action. Some visualizations are structured as invitations to notice and interpret, even
+            when they still frame what counts as interesting.
+          </figcaption>
+        </figure>
 
-        <li><span class="score">Score: -1</span> <strong>Using four-quadrant reference lines.</strong> The average lines divide the plot into a simple structure and make the lower-right region feel like a natural conclusion zone. This is subtle, but it strongly stabilizes the anti-reading.</li>
+        <figure>
+          <img src="img/5.png" alt="A diagram suggesting visualization intends the recipient to react in a certain way">
+          <figcaption>
+            <div class="cap-title">Figure 5 — A visualization can be designed to trigger a specific response</div>
+            This framing helped me see that persuasion is often built into design choices long before a reader consciously recognizes it.
+          </figcaption>
+        </figure>
 
-        <li><span class="score">Score: -1.5</span> <strong>Darkening the lower-right quadrant and its points.</strong> I specifically wanted viewers to focus on the high-burden, low-rate region, so I deepened the background tone there and made those points visually stronger. This is a persuasive design move because it channels attention toward the examples that best support the anti-position.</li>
+        <figure>
+          <img src="img/6.png" alt="A diagram suggesting visualization can invite conversation or express social positioning">
+          <figcaption>
+            <div class="cap-title">Figure 6 — A visualization can also build relationships, conversation, and position</div>
+            These examples extend the role of visualization beyond information transfer, showing how charts can stage dialogue,
+            affiliation, and authority.
+          </figcaption>
+        </figure>
+      </div>
 
-        <li><span class="score">Score: -1</span> <strong>Using red as an affective cue.</strong> The red palette is not neutral. It creates urgency, intensity, and a stronger emotional impression. That makes the emphasized lower-right points feel more consequential and therefore more convincing.</li>
+      <div class="closing">
+        <p>
+          My takeaway from this assignment is that ethical visualization is not the absence of persuasion, but the disciplined use of it.
+          I no longer think the most important question is whether a chart is “biased” in the abstract, because every act of selection,
+          transformation, and emphasis introduces perspective. The more useful question is whether the designer leaves enough of the data
+          visible for alternative interpretations to remain possible, or whether the visualization closes down ambiguity so aggressively
+          that its rhetoric starts to masquerade as inevitability.
+        </p>
 
-        <li><span class="score">Score: -1</span> <strong>Selective labeling of key states.</strong> Only a handful of states are named, and they are chosen because they make the chart’s directional story easier to read. The labels help guide the viewer toward the desired interpretation.</li>
+        <p>
+          That is why some of my choices above are scored as mixed rather than purely deceptive. A calculated field, a composite index,
+          or a comparison between two measures can be both analytically sincere and strategically useful. The ethical stakes emerge not
+          from the existence of framing, but from how much that framing conceals its own contingency. In that sense, the line between
+          acceptable persuasion and misleading design is real but unstable: it is less a border we can draw once and for all than a
+          responsibility we have to renegotiate each time we turn data into a visual argument.
+        </p>
+      </div>
 
-        <li><span class="score">Score: -1.5</span> <strong>Title framing the relationship as meaningful persistence.</strong> The title pushes the reader to interpret the negative relationship as evidence that barriers “still” matter, even after the possibility of relocation is acknowledged. This is stronger than a neutral variable description.</li>
-      </ul>
-    </div>
+      <div class="mini-note">
+        Image paths assumed in this page: <strong>img/1.png</strong>, <strong>img/2.png</strong>, <strong>img/3.png</strong>,
+        <strong>img/4.png</strong>, <strong>img/5.png</strong>, and <strong>img/6.png</strong>.
+      </div>
 
-    <h2>Final Reflection</h2>
-
-    <p>
-      What changed between these two visualizations was not the dataset, but the operational definition of what counted as evidence. In the first chart, I treated the mismatch between resident and in-state abortion rates as the central signal, which made displacement visible and made low in-state rates seem incomplete. In the second chart, I treated resident abortion rate as the only outcome that mattered and collapsed several forms of access restriction into one burden score, which made the overall pattern read as “higher barriers, lower rates.”
-    </p>
-
-    <p>
-      This assignment made clear that the most persuasive manipulations are often not the loudest ones. They are quieter decisions: which states to show, which variable to foreground, what to name the chart, how to sort the cases, and where to direct visual attention through color. In my first chart, I used darker color to attract the eye toward the values I most wanted the viewer to notice. In my second chart, I used the lower-right quadrant, darker tones, and a red palette to make one region feel like the natural conclusion of the figure. These choices do not fabricate data, but they shape where the viewer looks and what they take away first.
-    </p>
-
-    <p>
-      The line between persuasion and deception, then, is not just about whether the data are real. It is also about whether the visual system leaves room for competing interpretations to remain visible. Both of my charts are grounded in the same data, but each one quietly privileges a different understanding of what the data “mean.” That is what makes this assignment both powerful and ethically uncomfortable: the strongest visual arguments are often built not from falsehood, but from selective visibility.
-    </p>
-
+    </main>
   </div>
 </body>
 </html>
