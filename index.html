@@ -20,7 +20,6 @@
       --red-soft: #fdeeee;
       --green: #1f6b42;
       --green-soft: #edf8f1;
-      --card: #f9fbfd;
       --shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
       --radius: 16px;
       --max: 980px;
@@ -35,7 +34,7 @@
       background: linear-gradient(180deg, #f3f6fa 0%, #f7f8fa 160px, #f7f8fa 100%);
       color:var(--text);
       font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-      line-height:1.75;
+      line-height:1.78;
       padding: 52px 18px 72px;
     }
 
@@ -157,7 +156,7 @@
       margin:0;
       text-align:left;
       font-size:18px;
-      line-height:1.6;
+      line-height:1.65;
     }
 
     .section-intro{
@@ -186,7 +185,7 @@
       background: linear-gradient(180deg, #fbfcfe 0%, #f6f8fb 100%);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       font-size:14px;
-      line-height:1.65;
+      line-height:1.68;
       color: var(--muted-2);
     }
 
@@ -230,6 +229,39 @@
       border:1px solid #d7e3f4;
       background: var(--blue-soft);
       color:#355a84;
+    }
+
+    .formula{
+      margin: 16px 0 18px;
+      padding: 16px 18px;
+      border: 1px solid #d9e4f2;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #f8fbff 0%, #f1f6fc 100%);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color:#334155;
+    }
+
+    .formula strong{
+      display:block;
+      margin-bottom:8px;
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:0.08em;
+      color:#46627f;
+    }
+
+    .formula code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 14px;
+      white-space: normal;
+      word-break: break-word;
+      color:#0f1728;
+      background: rgba(255,255,255,0.65);
+      border:1px solid #dde7f3;
+      padding:10px 12px;
+      display:block;
+      border-radius:10px;
+      line-height: 1.7;
     }
 
     .score-list{
@@ -279,39 +311,7 @@
     }
 
     .reflection p{
-      font-size:17.5px;
-    }
-
-    .formula{
-      margin: 16px 0 18px;
-      padding: 16px 18px;
-      border: 1px solid #d9e4f2;
-      border-radius: 14px;
-      background: linear-gradient(180deg, #f8fbff 0%, #f1f6fc 100%);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      color:#334155;
-    }
-
-    .formula strong{
-      display:block;
-      margin-bottom:8px;
-      font-size:13px;
-      text-transform:uppercase;
-      letter-spacing:0.08em;
-      color:#46627f;
-    }
-
-    .formula code{
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      font-size: 14px;
-      white-space: normal;
-      word-break: break-word;
-      color:#0f1728;
-      background: rgba(255,255,255,0.65);
-      border:1px solid #dde7f3;
-      padding:10px 12px;
-      display:block;
-      border-radius:10px;
+      font-size:17.4px;
     }
 
     .image-grid{
@@ -365,9 +365,10 @@
         <div class="eyebrow">Interactive Visualization and Society · Assignment 4</div>
         <h1>Persuasive or Deceptive Visualization?</h1>
         <p class="subtitle">
-          This report uses the same Guttmacher Institute state-level abortion dataset to build two opposed visual arguments.
-          The point is not to discover a single neutral truth, but to show how visual rhetoric emerges through metric choice,
-          field construction, filtering, annotation, emphasis, and narrative framing.
+          This report uses the same Guttmacher Institute state-level abortion dataset to construct two opposed visual arguments.
+          Rather than treating visualization as neutral reporting, I approach it as a rhetorical practice shaped by selection,
+          transformation, weighting, ordering, color hierarchy, and framing. What interested me most in this assignment was not simply
+          whether a chart could be made convincing, but how easily conviction can emerge from choices that still feel technically reasonable.
         </p>
         <div class="meta">
           <span><strong>Shengtao Shen</strong></span>
@@ -380,19 +381,26 @@
       <h2>Proposition</h2>
       <div class="question">
         <span class="label">Proposition</span>
-        <p>Abortion bans and clinic scarcity do not eliminate abortion need; they mainly shift where abortion care is obtained and therefore where it is recorded.</p>
+        <p><em>Restricting abortion clinic access does not make abortion need disappear; it displaces care across state lines.</em></p>
       </div>
 
       <h2>Visualization 1 — For the Proposition</h2>
       <p class="section-intro">
-        My first chart is designed to make one pattern feel unavoidable: low abortion rates recorded <em>inside</em> a state do not necessarily mean low abortion demand among that state’s residents. To support the proposition, I foreground the discrepancy between abortions that occurred in a state and abortions obtained by that state’s residents.
+        The first visualization is designed to challenge a reading of the data that initially appears straightforward but, to me, feels
+        incomplete. If a viewer only looks at abortions recorded inside a state, low values can easily be interpreted as evidence that
+        abortion restrictions have successfully reduced abortion itself. I wanted to resist that conclusion. Instead of accepting in-state
+        counts as the whole story, this chart foregrounds the gap between abortions performed within a state and abortions obtained by that
+        state’s residents. That gap matters because it changes the emotional and political meaning of the numbers. What first looks like
+        decline may instead be displacement.
       </p>
 
       <figure>
         <img src="img/1.png" alt="Visualization 1 supporting the proposition">
         <figcaption>
-          <div class="cap-title">Figure 1 — FOR: Low in-state counts can conceal continued abortion demand among residents</div>
-          This chart compares each state’s in-state abortion rate with its resident abortion rate in the states where the mismatch is largest. By turning that discrepancy into a visible span, the figure encourages the reader to interpret low in-state rates not as disappearance of need, but as evidence of geographic displacement.
+          <div class="cap-title">Figure 1 — FOR: Low in-state abortion counts can conceal ongoing demand among residents</div>
+          This chart compares in-state abortion rates with resident abortion rates across the states where the mismatch between the two
+          measures is most pronounced. By making the distance between those values visually explicit, the figure encourages the reader to
+          interpret low in-state counts not as the disappearance of abortion need, but as evidence that care has shifted elsewhere.
           <div class="cap-meta">Source: Guttmacher Institute abortion data by state, 2020.</div>
         </figcaption>
       </figure>
@@ -404,56 +412,86 @@
         </div>
 
         <p>
-          This figure persuades by redefining what should count as the relevant measure. A viewer looking only at abortions performed within a state might conclude that abortion restrictions successfully reduced abortion itself. By placing that measure beside the abortion rate among the same state’s residents, I redirect attention from where care was recorded to whether residents still sought care at all.
+          This figure persuades by changing the viewer’s sense of what should count as the meaningful measure. A low in-state abortion rate
+          can seem reassuring, controlled, even successful, especially if it is viewed quickly or in isolation. But once that value is
+          placed beside the abortion rate among residents of the same state, the story starts to shift. The chart invites the reader to
+          see that abortion need may persist even when care is no longer recorded locally. I found this move persuasive precisely because
+          it does not require falsifying the data. It only requires asking the reader to look at a different relationship within the same data.
         </p>
 
         <p>
-          The chart is persuasive partly because it contains a real analytical insight and partly because it selectively amplifies that insight. The earnest part is the comparison itself: <em>occurrence rate</em> and <em>resident rate</em> are genuinely different measures, and the gap between them matters. The rhetorical part is that I only foreground the states where that difference is dramatic, rank them by gap size, and visually privilege the endpoint I want the viewer to trust most. I am not fabricating a pattern, but I am staging one interpretation so it appears especially coherent.
+          At the same time, I do not want to pretend the chart is innocent. It is persuasive because I deliberately made some relationships
+          much easier to see than others. I centered the states where the discrepancy is strongest, sorted them so the pattern accumulates
+          from top to bottom, and visually emphasized the endpoint that I wanted the reader to trust most. In other words, the figure
+          contains both an earnest analytical comparison and a strategic staging of that comparison. That tension became one of the most
+          important lessons of the assignment for me: a visualization can reveal something real while still guiding the viewer very carefully
+          toward one interpretation of that reality.
         </p>
 
         <ul class="score-list">
           <li>
             <span class="score earnest">Score: +1.5</span>
             <strong>Comparing resident abortion rate with in-state abortion rate.</strong>
-            This is the central analytical move of the project, and I regard it as mostly earnest. The two measures answer different questions, and putting them in the same frame helps reveal that “where abortions happened” is not the same as “whether residents sought abortions.” The comparison exposes a meaningful policy distinction rather than distorting the data.
+            This is the central analytical decision in the project, and I regard it as mostly earnest. The two measures answer genuinely
+            different questions: one describes where abortions occurred, while the other describes abortion rates among residents regardless
+            of where care was obtained. Placing them in the same frame reveals that a decline in recorded in-state abortions is not the same
+            thing as a decline in abortion need. This comparison is persuasive, but in a way that still feels substantively justified.
           </li>
 
           <li>
             <span class="score">Score: -1.5</span>
-            <strong>Showing the states with the largest mismatch.</strong>
-            I did not show all states with equal weight. I selected the cases where the resident-versus-occurrence gap is strongest, because those states make the proposition most persuasive. This is effective because it concentrates attention on the clearest evidence, but it is also selective because smaller or less supportive cases disappear from view.
+            <strong>Filtering to the states with the largest mismatch.</strong>
+            I did not show all states with equal emphasis. Instead, I selected the cases where the difference between resident and in-state
+            abortion rates is strongest, because those cases support the proposition most clearly. This is rhetorically effective because it
+            compresses the reader’s attention around the most dramatic evidence. It is also selective, because states with smaller gaps or
+            more ambiguous patterns are pushed out of view and therefore out of the viewer’s interpretive horizon.
           </li>
 
           <li>
             <span class="score">Score: -1</span>
-            <strong>Sorting by gap size rather than by alphabet or geography.</strong>
-            Ordering the states from the largest mismatch downward transforms a set of examples into what feels like a systematic ranked pattern. The move looks innocuous, but it strongly shapes interpretation: the viewer encounters the most dramatic cases first and then reads the rest as confirmation.
+            <strong>Sorting by gap size rather than alphabetically or geographically.</strong>
+            Ordering the states from the largest mismatch downward turns what could have been a loose set of examples into what feels like a
+            ranked and systematic pattern. The move is subtle, but it matters. A sorted list produces momentum. It encourages the reader to
+            experience the chart as cumulative evidence rather than as a neutral catalog of places. In that sense, the ordering is not just
+            organizational; it is argumentative.
           </li>
 
           <li>
             <span class="score neutral">Score: -0.5</span>
-            <strong>Using a span-based encoding.</strong>
-            I chose a slope/dumbbell-like span instead of detached bars or isolated points because it makes the difference between the two rates immediately legible. That is analytically helpful. At the same time, a long horizontal gap also feels dramatic, so the encoding intensifies the emotional force of the discrepancy. I see this as a mixed choice: informative in structure, but rhetorically strong in effect.
+            <strong>Using a span-based encoding rather than detached bars or isolated points.</strong>
+            The span is analytically useful because it makes the discrepancy between the two measures immediately legible. The eye can grasp
+            difference as distance without extra cognitive work. At the same time, long horizontal gaps feel emotionally consequential in a
+            way that separate marks might not. This choice therefore sits in a mixed zone for me: it is structurally honest, but rhetorically
+            stronger than it first appears.
           </li>
 
           <li>
             <span class="score">Score: -1.5</span>
-            <strong>Using color hierarchy and a strongly interpretive title.</strong>
-            I made the resident-rate endpoint darker so the viewer’s attention lands first on the measure I want to count as social reality. The title goes further by implying that abortion bans “relocate” care rather than reduce it. That reading is plausible, but it is still an interpretive claim, not a neutral description of the marks alone.
+            <strong>Using color hierarchy and an interpretive title.</strong>
+            I intentionally made the resident-related endpoint darker and visually heavier so the reader’s eye would be drawn toward the
+            measure I wanted to count as the more truthful indicator of need. The title then extends that framing by implying that the pattern
+            should be understood as displacement rather than reduction. That interpretation is plausible, but it is still an interpretation.
+            The chart does not merely show a gap; it gently tells the viewer how to feel about that gap before they have fully evaluated it themselves.
           </li>
         </ul>
       </div>
 
       <h2>Visualization 2 — Against the Proposition</h2>
       <p class="section-intro">
-        My second chart argues against the proposition by changing the question. Instead of asking whether abortion care was displaced across state lines, it asks whether residents in high-barrier states still have lower abortion rates overall. To make that argument work, I construct a single calculated field—the <em>Access Burden Score</em>—that compresses several dimensions of restriction into one axis.
+        The second visualization argues against the proposition by changing the question itself. Rather than emphasizing the mismatch between
+        where abortions are recorded and where residents seek care, it asks whether states with heavier access barriers still show lower
+        abortion rates among their own residents. To make that argument possible, I created a calculated field—the <em>Access Burden Score</em>—
+        that compresses several dimensions of restriction into one explanatory variable. This move makes the chart feel cleaner, calmer, and
+        more statistically coherent, but it also gives my own interpretive choices much more power.
       </p>
 
       <figure>
         <img src="img/2.png" alt="Visualization 2 arguing against the proposition">
         <figcaption>
-          <div class="cap-title">Figure 2 — AGAINST: Greater access barriers can still be read as lower abortion rates among residents</div>
-          This scatterplot reframes the issue by plotting resident abortion rate against a calculated Access Burden Score. Instead of highlighting displacement between measures, it converts multiple access-related variables into one synthetic burden metric and then guides the reader toward a negative relationship between restriction and abortion rate.
+          <div class="cap-title">Figure 2 — AGAINST: Higher access burdens can still be read as lower abortion rates among residents</div>
+          This scatterplot reframes the issue by plotting resident abortion rate against a calculated Access Burden Score. Instead of highlighting
+          displacement between measures, it turns several access-related variables into one weighted index and then guides the viewer toward a
+          negative relationship between restriction and abortion rate.
           <div class="cap-meta">Source: Guttmacher Institute abortion data by state, 2020.</div>
         </figcaption>
       </figure>
@@ -465,7 +503,11 @@
         </div>
 
         <p>
-          This chart persuades by replacing the comparison that powered Figure 1 with a new explanatory structure. In Figure 1, the key story was the mismatch between two abortion measures. In Figure 2, that mismatch disappears. I instead define a burden index and ask the viewer to interpret resident abortion rate as the primary outcome. That shift makes the chart feel cleaner, more causal, and more statistically coherent—even though it depends on my own choices about what should count as “burden.”
+          This chart persuades not by directly disproving the first one, but by redefining what kind of explanation should matter most. In
+          Figure 1, the visual drama came from a discrepancy between two measures. In Figure 2, that comparison disappears almost completely.
+          Instead, I ask the reader to view resident abortion rate as the main outcome and to accept “burden” as the main explanatory cause.
+          That shift changes the affect of the chart. It feels less like an argument about movement and more like an argument about structure.
+          It feels less like something to notice and more like something already organized, summarized, and explained.
         </p>
 
         <div class="formula">
@@ -474,38 +516,61 @@
         </div>
 
         <p>
-          I weighted the first component most heavily because it reflects how much of the reproductive-age population lacks local clinic access. I weighted county-level clinic absence second because it captures geographic scarcity, but it is less sensitive to where people actually live. I weighted out-of-state travel third because it is partly an outcome of burden rather than a pure precondition, but it still helps intensify the sense that access barriers are materially consequential. This field is therefore both analytical and rhetorical: it summarizes multiple relevant indicators, but it also encodes my own judgment about what forms of restriction should count the most.
+          Constructing this field was the most consequential transformation in the project. I weighted the first component most heavily
+          because it most directly reflects how much of the reproductive-age population lacks local clinic access. I weighted county-level
+          clinic absence second because it captures geographic scarcity, but it is less sensitive to where people actually live. I weighted
+          out-of-state travel third because it is partly an outcome of burden rather than a pure precondition, yet it still strengthens the
+          sense that access barriers have material consequences. On one level, this felt like a sincere analytical move. No single raw variable
+          seemed sufficient to describe abortion access. But on another level, the field is clearly authored. I decided what belonged inside
+          the category of burden, what counted more, and what counted less. In that sense, I was not only measuring the world; I was building
+          the lens through which the world would be seen.
         </p>
 
         <ul class="score-list">
           <li>
             <span class="score neutral">Score: +0.5</span>
-            <strong>Constructing a weighted Access Burden Score from multiple variables.</strong>
-            Rather than relying on one raw indicator, I built a calculated field from three measures: population exposure to clinic absence, county-level clinic scarcity, and out-of-state travel. This is analytically meaningful because abortion access is multidimensional, and a composite index makes that complexity more legible. It is also rhetorical because the weighting scheme is my own design decision rather than something naturally given by the data.
+            <strong>Constructing a weighted Access Burden Score.</strong>
+            I created a calculated field rather than relying on any one raw variable. The score combines
+            <em>% of women ages 15–44 living in a county without a clinic</em>,
+            <em>% of counties without a known clinic</em>, and
+            <em>% of residents obtaining abortions who traveled out of state</em>,
+            weighted at 0.5, 0.3, and 0.2 respectively. This is analytically meaningful because it compresses several relevant dimensions of
+            access into a single interpretable axis. It is also rhetorical because the category itself, and the weighting inside it, reflect
+            my own judgment about what should count most as restriction.
           </li>
 
           <li>
             <span class="score">Score: -1</span>
             <strong>Making population exposure the dominant component.</strong>
-            By assigning the largest weight to the share of women ages 15–44 living in counties without a clinic, I made the score feel population-centered and therefore more substantively grounded. That choice is defensible, but it also helps the variable appear more authoritative and more persuasive than a purely geographic measure might.
+            By assigning the largest weight to the share of women ages 15–44 living in counties without a clinic, I made the burden score
+            feel people-centered rather than merely territorial. This is defensible, since access ultimately affects people rather than counties,
+            but it also gives the variable a stronger moral and substantive legitimacy. That makes the chart easier to trust and therefore easier
+            to believe.
           </li>
 
           <li>
             <span class="score">Score: -1.5</span>
             <strong>Using resident abortion rate as the only outcome variable.</strong>
-            This is crucial because it removes the resident-versus-occurrence comparison that made relocation visible in Figure 1. Once that frame disappears, the viewer is invited to judge a different relationship: whether residents in high-burden states still show lower abortion rates overall.
+            This is one of the most important persuasive moves in the chart because it removes the in-state versus resident comparison that drove
+            Figure 1. Once that displacement frame disappears, the reader is encouraged to ask a different question: not where abortions happened,
+            but whether residents living under greater burdens still exhibit lower abortion rates overall. The argument changes because the frame changes.
           </li>
 
           <li>
             <span class="score">Score: -1</span>
-            <strong>Adding a regression line.</strong>
-            The regression line turns a scattered cloud into an interpretable directional story. It does not falsify the observations, but it stabilizes them into a readable pattern and encourages the viewer to see trend before noise.
+            <strong>Adding a regression line to stabilize the story.</strong>
+            The regression line does not falsify any point, but it turns a scattered cloud into a more legible directional relationship. It
+            encourages the reader to perceive trend before noise, coherence before exception. This is a common statistical device, yet it is
+            also a rhetorical one: it calms uncertainty and gives the impression that the anti-position has a stable backbone.
           </li>
 
           <li>
             <span class="score">Score: -1.5</span>
-            <strong>Using quadrant framing and darkening the lower-right region.</strong>
-            I intentionally emphasized the lower-right quadrant because it contains the cases that best support the anti-claim: higher burden, lower resident abortion rate. The values are unchanged, but visual hierarchy makes that corner feel like the chart’s conclusion. This is one of the clearest examples of persuasion through emphasis rather than through falsification.
+            <strong>Directing attention to the lower-right quadrant through color and framing.</strong>
+            I deliberately darkened the lower-right quadrant and strengthened the points located there because that region best supports the
+            anti-claim: higher burden, lower resident abortion rate. The data themselves are unchanged, but visual hierarchy makes that corner
+            feel like the chart’s natural conclusion. This is exactly the kind of move that made the assignment so interesting to me: emphasis
+            alone can make an interpretation feel more inevitable than it really is.
           </li>
         </ul>
       </div>
@@ -514,67 +579,116 @@
 
       <div class="reflection">
         <p>
-          What changed across these two visualizations was not the dataset itself, but the definition of what counted as evidence. In Figure 1, I treated the gap between resident and in-state abortion rates as the key signal, which made displacement visible and made low in-state counts look incomplete. In Figure 2, I treated resident abortion rate as the main outcome and built a synthetic measure of restriction to explain it. The two arguments therefore diverge not because one is invented and the other is true, but because each chart selectively elevates a different structure in the same data.
+          What changed between these two visualizations was not the dataset, but the narrative logic I asked the dataset to support. In the
+          first figure, I treated the gap between resident abortion rate and in-state abortion rate as the most meaningful signal. That choice
+          made displacement visible. It encouraged the reader to see that a low in-state count does not necessarily mean low abortion need, but
+          may instead reflect the movement of care across state lines. In the second figure, I abandoned that comparison and replaced it with a
+          different explanatory frame: a weighted burden score plotted against resident abortion rate. The result was not a simple correction of
+          the first chart, but a reorganization of what counted as evidence. The same data supported opposed narratives because each chart elevated
+          a different structure while allowing other structures to recede.
         </p>
 
         <p>
-          The calculated field in Figure 2 made this especially clear to me. It felt sincere because no single variable fully captures abortion access, and combining several indicators into one score can genuinely improve legibility. But it was also unmistakably authored. I had to decide which variables belonged inside the score, which ones did not, and what relative importance each deserved. The field therefore did not merely measure burden; it also expressed my judgment about what burden should mean.
+          The calculated field in Figure 2 was especially revealing to me. At first, building it felt intellectually honest. Access is not one
+          thing, and I did not want to reduce it to a single raw variable if that variable only captured one part of the problem. Combining several
+          indicators into one score seemed like a reasonable way to make a complicated condition more legible. But the more I worked on it, the more
+          I realized that legibility is never neutral. I had to decide which variables belonged in the score, which ones did not, and how much
+          conceptual weight each one should carry. Even when those decisions were defensible, they were still my decisions. The field did not simply
+          measure abortion burden; it expressed my own model of what abortion burden ought to mean.
         </p>
 
         <p>
-          This assignment made me less confident that there is a simple formal line between “persuasive” and “deceptive” visualization. Some of my choices were obviously strategic: filtering cases, ordering them by the strongest pattern, using darker color to direct attention, and writing titles that interpret before the viewer fully inspects the evidence. But other choices felt genuinely informative, such as comparing two different abortion measures or constructing a composite field to summarize multiple dimensions of access. What unsettled me is that the same technique can appear ethical or manipulative depending on how transparently it is explained and how much room it leaves for competing interpretations.
+          This assignment therefore changed the way I think about visual honesty. Before, I tended to imagine deception as something obvious:
+          truncated axes, fake scales, hidden data, or direct manipulation. But this exercise made the problem feel more subtle and, honestly,
+          more unsettling. Some of the most persuasive choices I made were not false at all. They were choices of emphasis, ordering, titling,
+          framing, annotation, and color hierarchy. I darkened the marks I wanted viewers to notice first. I selected the states that made my
+          argument strongest. I wrote captions and titles that did not merely describe the chart, but gently interpreted it in advance. None of
+          these moves invented numbers, yet all of them shaped the story. That is what made the boundary between persuasion and deception feel
+          much less stable than I had assumed.
         </p>
 
         <p>
-          I now think the more useful ethical question is not whether a chart contains rhetoric, because every chart does. The better question is how visible that rhetoric is and how aggressively it forecloses alternative readings. A visualization becomes more troubling when its framing is hidden so well that interpretation begins to feel inevitable. In that sense, ethical visualization may not mean eliminating persuasion. It may mean acknowledging that persuasion is always present and taking responsibility for how selectively, how strongly, and how invisibly it is used.
+          I also became more aware that visualizations do not simply present information; they imagine a viewer and anticipate a response.
+          While working on these charts, I was never just arranging marks on a page. I was thinking about what I wanted the reader to feel was
+          obvious, what I wanted them to question, what I hoped they would notice first, and what interpretation I wanted to linger after the
+          page was closed. In that sense, each visualization contained an implied audience and an intended response. That realization made the
+          ethical stakes feel more personal. The question is not only whether a chart is accurate in some narrow technical sense, but whether
+          its rhetoric becomes so naturalized that the viewer forgets they are being guided at all.
         </p>
 
         <p>
-          The following images helped me articulate that idea more clearly. They suggest that visualization is never only a neutral transfer of information. A chart can invite observation, call for action, provoke reaction, organize discussion, or express the social position of its maker. Once I began thinking this way, it became easier to see that my own charts were not passive containers of data. Each one imagined a viewer, structured their attention, and hoped to leave them with a particular conclusion.
+          The images below helped me articulate that feeling more clearly. They suggest that visualization is not only a vehicle for information,
+          but also a medium of address. A chart can inform, persuade, provoke, reassure, accuse, simplify, or organize discussion. It can also
+          reflect the social and political position of the person who made it. Once I started thinking this way, I could no longer imagine my own
+          charts as neutral containers of evidence. Each one was selective. Each one carried a point of view. Each one made some readings easier
+          and others harder.
+        </p>
+
+        <p>
+          My final takeaway is not that persuasion should be removed from visualization, because I no longer believe that is possible. Every chart
+          involves selection, transformation, and emphasis. The more meaningful ethical question is whether those choices remain visible enough that
+          the reader can still sense their contingency. A visualization becomes more troubling when its rhetoric hides itself so successfully that
+          interpretation starts to feel inevitable. For me, then, ethical visualization is not the absence of argument. It is the willingness to
+          argue without pretending that one’s framing is simply the world speaking for itself.
         </p>
       </div>
 
       <div class="image-grid">
         <figure>
-          <img src="img/3.png" alt="A cartoon about our persuasive visualization versus their deceptive visualization">
+          <img src="img/3.png" alt="A cartoon about persuasive visualization versus deceptive visualization">
           <figcaption>
             <div class="cap-title">Figure 3 — The line between persuasion and deception is unstable</div>
-            This image captures the irony at the center of the assignment: one person’s “annotation,” “framing,” or “emphasis” may easily become another person’s “spin,” “bias,” or “manipulation.” It reminds me that evaluation often depends on perspective as much as on form.
+            This image captures the irony at the center of the assignment. What one person calls annotation, emphasis, or framing may be named by
+            someone else as bias, spin, or manipulation. It reminded me that the evaluation of a chart is never only about form; it is also about
+            who is speaking, who is judging, and which interpretation is socially legitimized.
           </figcaption>
         </figure>
 
         <figure>
-          <img src="img/4.png" alt="A diagram suggesting that a visualization may simply inform without directly demanding action">
+          <img src="img/4.png" alt="A diagram suggesting that visualization may simply inform without demanding action">
           <figcaption>
-            <div class="cap-title">Figure 4 — A chart can be designed primarily to inform</div>
-            Not every visualization demands immediate action. Some are built as invitations to notice and interpret. Even then, however, they still frame what counts as relevant, visible, and worth attention.
+            <div class="cap-title">Figure 4 — A visualization can be structured as an act of informing</div>
+            Not every chart is built to command immediate action. Some visualizations primarily ask the viewer to notice, compare, and reflect.
+            But even then, they still frame what deserves attention and what counts as relevant. The absence of overt persuasion does not mean
+            the absence of perspective.
           </figcaption>
         </figure>
 
         <figure>
-          <img src="img/5.png" alt="A diagram suggesting that a visualization can be designed to trigger a particular response">
+          <img src="img/5.png" alt="A diagram suggesting visualization can trigger a specific response">
           <figcaption>
-            <div class="cap-title">Figure 5 — A chart can be designed to trigger a response</div>
-            This image helped me recognize that persuasion often begins before the viewer consciously notices it. Layout, color, grouping, and annotation can quietly prepare an emotional or political response in advance of explicit interpretation.
+            <div class="cap-title">Figure 5 — A visualization can also be designed to trigger a response</div>
+            This framing helped me see that persuasion often begins long before the viewer consciously recognizes it. Layout, color, grouping,
+            and annotation can quietly prepare an emotional or political response in advance of explicit interpretation.
           </figcaption>
         </figure>
 
         <figure>
-          <img src="img/6.png" alt="A diagram suggesting that visualization can build relationships, conversation, and social positioning">
+          <img src="img/6.png" alt="A diagram suggesting visualization can build conversation and social position">
           <figcaption>
-            <div class="cap-title">Figure 6 — Visualization can also stage dialogue, position, and authority</div>
-            These examples extend the role of visualization beyond information transfer. A chart can also organize a conversation, establish credibility, or signal the worldview of the person who made it.
+            <div class="cap-title">Figure 6 — Visualization can stage dialogue, affiliation, and authority</div>
+            These examples extend the role of visualization beyond information transfer. A chart can organize conversation, establish credibility,
+            or signal the worldview of the person who made it. That broader social role helped me understand why visual ethics cannot be reduced
+            to accuracy alone.
           </figcaption>
         </figure>
       </div>
 
       <div class="closing">
         <p>
-          My main takeaway from this assignment is that ethical visualization is not the absence of persuasion, but the disciplined use of it. Every act of selection, transformation, and emphasis introduces perspective. The harder and more important task is deciding whether that perspective still leaves enough of the data visible for other interpretations to remain imaginable.
+          My takeaway from this assignment is that ethical visualization is not the absence of persuasion, but the disciplined use of it. I no
+          longer think the most important question is whether a chart is biased in the abstract, because every act of selection, transformation,
+          aggregation, and emphasis introduces perspective. The more useful question is whether the designer leaves enough of the data visible for
+          alternative interpretations to remain imaginable, or whether the chart closes down ambiguity so aggressively that its rhetoric begins to
+          masquerade as inevitability.
         </p>
 
         <p>
-          That is why several of my design decisions above are scored as mixed rather than purely deceptive. A calculated field, a composite index, or a comparison between two measures can be both analytically sincere and strategically useful at the same time. The ethical risk emerges when a chart hides the contingency of those choices so effectively that its rhetoric starts to masquerade as inevitability.
+          That is why several of my choices above are scored as mixed rather than purely deceptive. A calculated field, a composite index, or a
+          comparison between two measures can be analytically sincere and strategically useful at the same time. The ethical problem emerges not
+          from the existence of framing, but from how much that framing conceals its own contingency. In that sense, the line between acceptable
+          persuasion and misleading design is real but unstable: less a fixed border than a responsibility that must be renegotiated each time we
+          turn data into a visual argument.
         </p>
       </div>
 
