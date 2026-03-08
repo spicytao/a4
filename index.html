@@ -178,6 +178,11 @@
       margin:0;
       text-align:left;
     }
+
+    .score{
+      font-weight:700;
+      color:#374151;
+    }
   </style>
 </head>
 
@@ -199,7 +204,7 @@
     <div class="question">
       <span class="label">Proposition</span>
       <p>
-        Abortion bans and clinic scarcity do not reduce abortion need; they primarily relocate where abortion care occurs.
+        Abortion bans and clinic scarcity do not reduce abortion need; they primarily relocate where abortion care is recorded.
       </p>
     </div>
 
@@ -209,19 +214,36 @@
       <img src="img/1.png" alt="Visualization 1 supporting the proposition">
       <figcaption>
         <div class="cap-title">Figure 1 — FOR: Abortion bans don’t reduce need, only relocate care</div>
-        This visualization compares in-state abortion rates to resident abortion rates across selected states where the mismatch is strongest. The long horizontal spans emphasize states in which abortion care appears much lower when measured by in-state occurrence than when measured by residents’ experiences.
+        This chart compares in-state abortion rates with resident abortion rates across a selected set of states where the mismatch is strongest. The long horizontal spans visually emphasize states where abortion care appears much lower when measured by in-state occurrence than when measured by the experiences of state residents.
         <div class="cap-meta">Source: Guttmacher Institute abortion data by state, 2020.</div>
       </figcaption>
     </figure>
 
     <div class="analysis-block">
-      <p><strong>How this chart argues for the proposition:</strong> This chart frames the gap between <em>in-state abortion rate</em> and <em>resident abortion rate</em> as evidence that abortion care has not disappeared, but has instead shifted out of state. By focusing on the most extreme mismatches, the figure encourages the reader to interpret low in-state rates as incomplete or misleading indicators of actual abortion need.</p>
+      <p><strong>How this chart argues for the proposition:</strong> This visualization supports the proposition by framing low in-state abortion rates as incomplete evidence. Instead of asking only how many abortions occur within a state, it compares that number to the abortion rate among people who live in that state. Where the resident rate remains much higher than the in-state rate, the chart suggests that abortion need has not disappeared, but that abortion care has simply become less visible locally and more likely to occur elsewhere.</p>
+
+      <p>The figure becomes persuasive because it is not organized neutrally. First, it focuses on a subset of states where the mismatch is especially large, so the reader is immediately confronted with the strongest examples rather than the most representative national average. Second, the chart is ordered so that the most dramatic cases appear first, encouraging the reader to interpret the remaining examples through that same frame. Once Missouri appears as the opening case, the rest of the graphic reads as further confirmation rather than as mixed evidence.</p>
+
+      <p>The title also performs substantial rhetorical work. Rather than simply describing a comparison between two rates, it interprets the gap as proof that abortion bans “relocate care.” That is a stronger claim than the marks alone can fully establish, but it gives the viewer a causal explanation before they begin reading the data closely. In that sense, the title turns an observed mismatch into a political conclusion.</p>
+
+      <p>Color is another major part of the persuasion. I intentionally made the values I most wanted the viewer to notice darker and more visually dominant. The resident-related endpoint is encoded with the darkest and most saturated color, while the in-state endpoint is visually weaker. This means the eye is naturally pulled toward the resident value first, making it feel like the truer or more important number. That choice strengthens the chart’s argument because it quietly teaches the viewer which metric should count as reality.</p>
+
+      <p>The same is true of emphasis more broadly: the most supportive cases are not only sorted first, but also visually intensified. The strongest spans are longer, darker, and more heavily annotated. These choices do not fabricate data, but they do shape what the reader sees first, remembers most, and interprets as central.</p>
 
       <ul>
-        <li><strong>Selected states only:</strong> The chart does not show all 50 states equally. Instead, it highlights those where the mismatch between resident and in-state rates is largest, making the relocation argument appear especially strong.</li>
-        <li><strong>Range-style encoding:</strong> The horizontal span makes the difference itself feel like the main story. Rather than presenting two separate values neutrally, the bar visually dramatizes the gap between them.</li>
-        <li><strong>Color hierarchy:</strong> The resident-related endpoint is made more visually prominent than the in-state endpoint, subtly encouraging the reader to treat resident rate as the more meaningful reality.</li>
-        <li><strong>Strong framing title:</strong> The title implies a causal interpretation: abortion bans do not reduce need, but merely change where care is recorded.</li>
+        <li><span class="score">Score: -2</span> <strong>Filtering to a subset of high-mismatch states.</strong> I did not show all states equally. Instead, I selected states where the gap between resident abortion rate and in-state abortion rate is especially large. This is the most consequential persuasive move because it concentrates the chart around the strongest supporting evidence and suppresses weaker counterexamples.</li>
+
+        <li><span class="score">Score: -1</span> <strong>Sorting states by mismatch strength.</strong> The figure is ordered to make the most dramatic cases appear first. This creates the impression of a ranked, systematic pattern rather than a scattered comparison. The ordering itself helps transform a set of cases into an argument.</li>
+
+        <li><span class="score">Score: 1</span> <strong>Using a span-based comparison rather than two disconnected values.</strong> The range-style encoding is analytically useful because it makes the difference between the two rates instantly legible. Even without persuasive framing, this is an appropriate visual form for the comparison being made.</li>
+
+        <li><span class="score">Score: -1.5</span> <strong>Color hierarchy to direct attention.</strong> I intentionally made the data I most wanted the reader to notice darker and more saturated. The resident endpoint is visually dominant, so the eye is drawn there first. This increases persuasiveness by encouraging the viewer to treat the resident rate as the more meaningful reality.</li>
+
+        <li><span class="score">Score: -1</span> <strong>Using color to amplify the strongest evidence.</strong> Beyond simple differentiation, color here functions as emphasis. The darkest values attract attention and make the most supportive states feel more important. This is not a neutral use of color; it is a way of controlling visual hierarchy in favor of the proposition.</li>
+
+        <li><span class="score">Score: -1.5</span> <strong>Title framing the comparison as causal relocation.</strong> The title does not simply describe the figure. It tells the reader what conclusion to draw: abortion bans do not reduce need, they relocate care. That interpretation is plausible, but stronger than the chart alone can definitively prove.</li>
+
+        <li><span class="score">Score: -0.5</span> <strong>Missouri callout as a rhetorical anchor.</strong> Highlighting the most extreme example makes the argument feel immediate and memorable. The callout uses real data, but it also invites the reader to generalize from the strongest case outward.</li>
       </ul>
     </div>
 
@@ -230,31 +252,56 @@
     <figure>
       <img src="img/2.png" alt="Visualization 2 arguing against the proposition">
       <figcaption>
-        <div class="cap-title">Figure 2 — AGAINST: Higher access barriers still correspond with lower resident abortion rates</div>
-        This scatterplot reframes the question by treating resident abortion rate as the primary outcome and a composite access burden score as the explanatory variable. The downward trend and highlighted lower-right quadrant suggest that higher barriers still align with lower abortion rates overall.
+        <div class="cap-title">Figure 2 — AGAINST: Higher access barriers still align with lower resident abortion rates</div>
+        This scatterplot reframes the question by treating resident abortion rate as the primary outcome and a composite access burden score as the explanatory variable. The downward trend, selective labels, and emphasized lower-right quadrant all encourage the reader to interpret high barriers as still associated with lower abortion rates overall.
         <div class="cap-meta">Source: Guttmacher Institute abortion data by state, 2020.</div>
       </figcaption>
     </figure>
 
     <div class="analysis-block">
-      <p><strong>How this chart argues against the proposition:</strong> Instead of comparing where abortions occur, this visualization treats resident abortion rate itself as the key outcome and argues that states with greater access burdens still tend to show lower rates. This shifts attention away from geographic relocation and toward a broader claim that restrictions still matter even after out-of-state travel is considered.</p>
+      <p><strong>How this chart argues against the proposition:</strong> This visualization takes the opposite position by changing the question. Instead of asking where abortions are performed, it asks whether states with greater barriers to access still show lower abortion rates among residents. That shift is crucial. Once the in-state versus resident comparison disappears, the displacement argument loses visibility and the overall relationship between barriers and rates becomes the dominant reading.</p>
+
+      <p>The x-axis uses a composite Access Burden Score, which combines several restrictions into a single variable. This makes the chart look more comprehensive and more analytically authoritative than a single clinic-access measure would. It also creates a stronger sense that the x-axis represents a real and total burden, which helps the anti-position appear more systematic and credible.</p>
+
+      <p>The trend line and the quadrant structure do most of the rhetorical work. The regression line organizes a noisy cloud of points into a clean downward story, while the horizontal and vertical average lines divide the chart into simple interpretive zones. This makes the lower-right quadrant feel like a meaningful conclusion: high burden, low resident rate. Once the chart is divided in this way, the reader is naturally guided toward that region as the place where the anti-argument “lives.”</p>
+
+      <p>Color and background emphasis intensify that effect. I intentionally wanted viewers to pay special attention to the lower-right quadrant, so I darkened both the points in that region and the background of that quadrant itself. This makes the points there feel more visually important than equally valid points elsewhere in the chart. The viewer’s attention is not spread evenly across the scatterplot; it is pulled toward the part of the chart that most strongly supports the anti-position.</p>
+
+      <p>The use of red also matters. Red carries emotional and perceptual weight: it feels urgent, consequential, and heightened. By using a red-based palette and deepening the tones in the lower-right region, I make that area feel more significant and more decisive than the rest of the graph. In other words, color here is not merely descriptive; it is affective. It helps the chart produce a feeling that “something important is happening here,” which strengthens the argument beyond the trend line alone.</p>
+
+      <p>Selective labeling extends the same logic. Only a small set of states are named, and they are chosen because they reinforce the structure of the argument: low-burden, high-rate states in the upper-left and high-burden, low-rate states in the lower-right. These labels create narrative anchors that make the chart feel easier to interpret and more conclusive than it actually is.</p>
 
       <ul>
-        <li><strong>Single outcome focus:</strong> By using resident abortion rate alone, the chart suppresses the resident-versus-in-state mismatch that dominated the first figure.</li>
-        <li><strong>Composite burden score:</strong> Multiple barriers are combined into one variable, making access restriction look more comprehensive and more analytically authoritative.</li>
-        <li><strong>Trend line and quadrants:</strong> The regression line and average reference lines stabilize the interpretation and help the reader quickly identify the “high burden, low rate” pattern.</li>
-        <li><strong>Selective labeling:</strong> Only a small number of strategically chosen states are labeled, guiding attention toward examples that reinforce the anti-position.</li>
+        <li><span class="score">Score: -2</span> <strong>Using only resident abortion rate as the outcome.</strong> By removing the in-state versus resident comparison that dominated Figure 1, I suppress the displacement story and redefine what the reader should treat as the meaningful measure of abortion incidence.</li>
+
+        <li><span class="score">Score: -1</span> <strong>Constructing a composite Access Burden Score.</strong> Combining multiple barriers into a single variable makes the chart feel more comprehensive and more analytically authoritative, even though the score itself is a constructed choice.</li>
+
+        <li><span class="score">Score: -1</span> <strong>Adding a regression line.</strong> The trend line transforms a noisy cloud into a coherent negative relationship. It gives the reader a ready-made interpretation and reduces the sense of ambiguity in the scatterplot.</li>
+
+        <li><span class="score">Score: -1</span> <strong>Using four-quadrant reference lines.</strong> The average lines divide the plot into a simple structure and make the lower-right region feel like a natural conclusion zone. This is subtle, but it strongly stabilizes the anti-reading.</li>
+
+        <li><span class="score">Score: -1.5</span> <strong>Darkening the lower-right quadrant and its points.</strong> I specifically wanted viewers to focus on the high-burden, low-rate region, so I deepened the background tone there and made those points visually stronger. This is a persuasive design move because it channels attention toward the examples that best support the anti-position.</li>
+
+        <li><span class="score">Score: -1</span> <strong>Using red as an affective cue.</strong> The red palette is not neutral. It creates urgency, intensity, and a stronger emotional impression. That makes the emphasized lower-right points feel more consequential and therefore more convincing.</li>
+
+        <li><span class="score">Score: -1</span> <strong>Selective labeling of key states.</strong> Only a handful of states are named, and they are chosen because they make the chart’s directional story easier to read. The labels help guide the viewer toward the desired interpretation.</li>
+
+        <li><span class="score">Score: -1.5</span> <strong>Title framing the relationship as meaningful persistence.</strong> The title pushes the reader to interpret the negative relationship as evidence that barriers “still” matter, even after the possibility of relocation is acknowledged. This is stronger than a neutral variable description.</li>
       </ul>
     </div>
 
     <h2>Final Reflection</h2>
 
     <p>
-      What changed across these two visualizations was not the underlying dataset, but the operational definition of what counted as evidence. In the first chart, I emphasized the mismatch between in-state and resident abortion rates, encouraging the reader to see low in-state rates as signs of displacement rather than disappearance. In the second chart, I treated resident abortion rate as the primary outcome and collapsed multiple access barriers into a single explanatory measure, which made the overall pattern read as “higher barriers, lower rates.”
+      What changed between these two visualizations was not the dataset, but the operational definition of what counted as evidence. In the first chart, I treated the mismatch between resident and in-state abortion rates as the central signal, which made displacement visible and made low in-state rates seem incomplete. In the second chart, I treated resident abortion rate as the only outcome that mattered and collapsed several forms of access restriction into one burden score, which made the overall pattern read as “higher barriers, lower rates.”
     </p>
 
     <p>
-      This exercise made clear that persuasive visualization often depends less on obvious distortion than on quieter decisions about framing, aggregation, and variable selection. The most effective manipulations were not dramatic color choices, but decisions about what to compare, what to hide, and which reading to make feel natural first. In that sense, the line between persuasion and deception is not fixed; it often lies in whether the chart still leaves room for an alternative interpretation to remain visible.
+      This assignment made clear that the most persuasive manipulations are often not the loudest ones. They are quieter decisions: which states to show, which variable to foreground, what to name the chart, how to sort the cases, and where to direct visual attention through color. In my first chart, I used darker color to attract the eye toward the values I most wanted the viewer to notice. In my second chart, I used the lower-right quadrant, darker tones, and a red palette to make one region feel like the natural conclusion of the figure. These choices do not fabricate data, but they shape where the viewer looks and what they take away first.
+    </p>
+
+    <p>
+      The line between persuasion and deception, then, is not just about whether the data are real. It is also about whether the visual system leaves room for competing interpretations to remain visible. Both of my charts are grounded in the same data, but each one quietly privileges a different understanding of what the data “mean.” That is what makes this assignment both powerful and ethically uncomfortable: the strongest visual arguments are often built not from falsehood, but from selective visibility.
     </p>
 
   </div>
